@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>标签: Vue | L_Penguin's BlogWeb</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/pwa/favicon.ico"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.10.0"><!-- inject head--><link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/7pOrz0WXB5ZWJPX/latest/iconfont.css"><!-- aplayer--><!-- swiper--><!-- fancybox ui--><!-- katex--><!-- Open Graph--><meta name="description" content="This is the web of L_Penguin for recording the knowledage"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="L_Penguin's BlogWeb"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.ico"><link rel="apple-touch-icon" href="/img/pwa/favicon.ico" sizes="180x180"><script>console.log(
+    "%c Program: Hexo %c Theme: Solitude %c Version: v1.10.0",
+    "border-radius:5px 0 0 5px;padding: 5px 10px;color:white;background:#ff3842;",
+    "padding: 5px 10px;color:white;background:#3e9f50;",
+    "padding: 5px 10px;color:white;background:#0084ff;border-radius:0 5px 5px 0",
+)
+</script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+    
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+    
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+    
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+    
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+        
+                if (name && keyObj[name]) return
+        
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+        }
+    })()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2023-04-20 00:00:00',
+    lazyload: {
+        enable: true,
+        error: '/img/error_load.png'
+    },
+    copyright: {"limit":50,"author":"作者: L_Penguin","link":"链接: ","source":"来源: L_Penguin's BlogWeb","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
+    highlight: {
+        enable: true,
+        limit: 200,
+        expand: true,
+        copy: true,
+        syntax: 'highlight.js'
+    },
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可"},
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '吃饱了才有力气干活',
+            afternoon: '集中精力，攻克难关',
+            night: '不要太劳累了，早睡更健康',
+            goodnight: '睡个好觉，保证精力充沛',
+        },
+        sayhello2: ["🤖️ 数码科技爱好者","🎮 电竞游戏爱好者"],
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: false,
+    lightbox: 'null',
+    post_ai: false,
+    right_menu: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: false,
+    is_page: true,
+    is_home: false,
+    page: '',
+    toc: false,
+    comment: false,
+    ai_text: false
+}</script><meta name="generator" content="Hexo 7.2.0"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude st-close-fill"></i></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude st-moon-clear-fill"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude st-side-bar-fill"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude st-moon-clear-fill"></i><span>显示模式</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/L-Penguin/bridge-project" title="bridge-project"><img class="nolazyload back-menu-item-icon" src="/img/pwa/favicon.ico" alt="bridge-project"><span class="back-menu-item-text">bridge-project</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/JavaScript/">JavaScript<sup>4</sup></a><a href="/tags/TypeScript/">TypeScript<sup>2</sup></a><a href="/tags/%E9%9D%A2%E8%AF%95/">面试<sup>1</sup></a><a href="/tags/CSS/">CSS<sup>1</sup></a><a href="/tags/HTML/">HTML<sup>1</sup></a><a href="/tags/React/">React<sup>2</sup></a><a href="/tags/React-Native/">React Native<sup>1</sup></a><a href="/tags/Webpack/">Webpack<sup>1</sup></a><a href="/tags/Node-js/">Node.js<sup>1</sup></a><a href="/tags/Vue/">Vue<sup>2</sup></a><a href="/tags/React-Native/">React-Native<sup>1</sup></a><a href="/tags/webpack/">webpack<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="back-home-button-icon solitude st-more-fill"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/L-Penguin/bridge-project" title="bridge-project"><img class="nolazyload back-menu-item-icon" src="/img/pwa/favicon.ico" alt="bridge-project"><span class="back-menu-item-text">bridge-project</span></a></div></div></div></div><a id="site-name" href="/" title="返回博客主页"><span class="title">L_Penguin's BlogWeb</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">标签: Vue</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="solitude st-train-line"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude st-signal-tower-fill"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><i class="solitude st-dashboard-fill"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude st-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude st-menu-line"></i></a></div></div></div></nav></header><main class="layout" id="content-inner"><div id="tag"><div id="tag-page-tags"><a id="JavaScript" href="/tags/JavaScript/"><span class="tags-punctuation"></span>JavaScript<span class="tagsPageCount">4</span></a><a id="TypeScript" href="/tags/TypeScript/"><span class="tags-punctuation"></span>TypeScript<span class="tagsPageCount">2</span></a><a id="面试" href="/tags/%E9%9D%A2%E8%AF%95/"><span class="tags-punctuation"></span>面试<span class="tagsPageCount">1</span></a><a id="CSS" href="/tags/CSS/"><span class="tags-punctuation"></span>CSS<span class="tagsPageCount">1</span></a><a id="HTML" href="/tags/HTML/"><span class="tags-punctuation"></span>HTML<span class="tagsPageCount">1</span></a><a id="React" href="/tags/React/"><span class="tags-punctuation"></span>React<span class="tagsPageCount">2</span></a><a id="React Native" href="/tags/React-Native/"><span class="tags-punctuation"></span>React Native<span class="tagsPageCount">1</span></a><a id="Webpack" href="/tags/Webpack/"><span class="tags-punctuation"></span>Webpack<span class="tagsPageCount">1</span></a><a id="Node.js" href="/tags/Node-js/"><span class="tags-punctuation"></span>Node.js<span class="tagsPageCount">1</span></a><a class="select" id="Vue" href="/tags/Vue/"><span class="tags-punctuation"></span>Vue<span class="tagsPageCount">2</span></a><a id="React-Native" href="/tags/React-Native/"><span class="tags-punctuation"></span>React-Native<span class="tagsPageCount">1</span></a><a id="webpack" href="/tags/webpack/"><span class="tags-punctuation"></span>webpack<span class="tagsPageCount">1</span></a></div><div class="recent-posts" id="recent-posts"><div class="recent-post-item" onclick="pjax.loadUrl('/2024/05/03/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%96%87%E6%A1%A3/')"><div class="post_cover"><a href="/2024/05/03/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%96%87%E6%A1%A3/" title="Frontend面试问题汇总"><img class="post_bg" src= "/img/loading.gif" data-lazy-src="/../assets/readme.jpg" alt="Frontend面试问题汇总"></a></div><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><span class="original">Frontend</span><a class="unvisited-post" href="/2024/05/03/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%96%87%E6%A1%A3/">未读</a></div><a class="article-title" href="/2024/05/03/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%96%87%E6%A1%A3/" title="Frontend面试问题汇总">Frontend面试问题汇总</a></div><div class="content">前端面试文档
+参考: https://q.shanyue.tech/、https://developer.mozilla.org/zh-CN/
+
+Httphttp中常见状态码
+1xx 表示信息
+2xx 表示成功
+200 请求成功
+
+
+3xx 表示重定向
+301 永久重定向
+302 临时重定向
+304 自上次请求，未修改的文件
+
+
+4xx 表示客户端错误
+400 错误的请求
+401 未被授权，需要身份验证，例如token信息等等
+403 请求被拒绝
+404 资源缺失，接口不存在，或请求的文件不存在等等
+
+
+5xx 表示服务端错误
+500 服务端未知错误
+502 网关错误
+503 服务暂时无法使用
+
+
+
+http缓存机制JS防抖 &amp; 节流，应用场景</div><div class="article-meta-wrap"><span class="article-meta tags"><a class="article-meta__tags" href="/tags/JavaScript/" onclick="event.stopPropagation();"><span class="tags-punctuation">JavaScript</span></a><a class="article-meta__tags" href="/tags/TypeScript/" onclick="event.stopPropagation();"><span class="tags-punctuation">TypeScript</span></a><a class="article-meta__tags" href="/tags/%E9%9D%A2%E8%AF%95/" onclick="event.stopPropagation();"><span class="tags-punctuation">面试</span></a><a class="article-meta__tags" href="/tags/CSS/" onclick="event.stopPropagation();"><span class="tags-punctuation">CSS</span></a><a class="article-meta__tags" href="/tags/HTML/" onclick="event.stopPropagation();"><span class="tags-punctuation">HTML</span></a><a class="article-meta__tags" href="/tags/React/" onclick="event.stopPropagation();"><span class="tags-punctuation">React</span></a><a class="article-meta__tags" href="/tags/React-Native/" onclick="event.stopPropagation();"><span class="tags-punctuation">React Native</span></a><a class="article-meta__tags" href="/tags/Webpack/" onclick="event.stopPropagation();"><span class="tags-punctuation">Webpack</span></a><a class="article-meta__tags" href="/tags/Node-js/" onclick="event.stopPropagation();"><span class="tags-punctuation">Node.js</span></a><a class="article-meta__tags" href="/tags/Vue/" onclick="event.stopPropagation();"><span class="tags-punctuation">Vue</span></a></span><span class="post-meta-date"><time datetime="2024-05-03T10:00:00.000Z"></time></span></div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/05/01/README/')"><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><span class="original">Frontend</span><a class="unvisited-post" href="/2024/05/01/README/">未读</a></div><a class="article-title" href="/2024/05/01/README/" title="ReadMe First">ReadMe First</a></div><div class="content">[TOC]
+JavaScriptReact
+react 相关内容: hooks
+官方文档：https://react.dev/
+中文文档：https://zh-hans.react.dev/
+
+创建项目
+npx create-react-app my-app
+
+Next.js
+Nextjs是一个基于React构建的轻量级框架，用于构建静态和服务端渲染的应用程序。
+官方文档: https://nextjs.org/
+中文文档: https://www.nextjs.cn/
+
+创建项目1npx create-next-app@latest --typescript
+
+getServerSideProps
+页面中的API，执行环境为node端。
+配置后切换SSR渲染模式
+
+123456import &#123; GetServerSideProps &#125; from &#x27;next&#x27;;export const getServerSideProps: GetServerSideProps = async context =&gt; &#123;    return &#1 ...</div><div class="article-meta-wrap"><span class="article-meta tags"><a class="article-meta__tags" href="/tags/JavaScript/" onclick="event.stopPropagation();"><span class="tags-punctuation">JavaScript</span></a><a class="article-meta__tags" href="/tags/React/" onclick="event.stopPropagation();"><span class="tags-punctuation">React</span></a><a class="article-meta__tags" href="/tags/Vue/" onclick="event.stopPropagation();"><span class="tags-punctuation">Vue</span></a><a class="article-meta__tags" href="/tags/React-Native/" onclick="event.stopPropagation();"><span class="tags-punctuation">React-Native</span></a><a class="article-meta__tags" href="/tags/webpack/" onclick="event.stopPropagation();"><span class="tags-punctuation">webpack</span></a></span><span class="post-meta-date"><time datetime="2024-05-01T04:00:00.000Z"></time></span></div></div><div class="post_cover"><a href="/2024/05/01/README/" title="ReadMe First"><img class="post_bg" src= "/img/loading.gif" data-lazy-src="/img/default.png" alt="ReadMe First"></a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><div class="toPageGroup"><input id="toPageText" oninput="value=value.replace(/[^0-9]/g,'')" maxlength="3" title="跳转到指定页面" onkeyup="if (this.value === '0') this.value = ''"><a id="toPageButton" onclick="sco.toPage()"><i class="solitude st-show-right-line"></i></a></div></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-bg-top"><div class="is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div></div><a class="card-info-avatar" href="/about/" title="头像"><div class="avatar-img"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.png" alt="头像"></div><div class="avatar-sticker"><img class="avatar-sticker-img" src= "/img/loading.gif" data-lazy-src="https://7.isyangs.cn/34/65f2e4e0423cc-34.png" alt="心情贴纸"></div></a><div class="card-info__desc_group"><div class="author-info__name">L_Penguin</div><div class="author-info__desc">让每天过的有意义！</div><div class="card-info__data is-center"><a href="/archives/" title="累计文章数:4"><div class="length-num">4</div><div class="headline">文章</div></a><a href="/tags/" title="标签总数:12"><div class="length-num">12</div><div class="headline">标签</div></a><a href="/categories/" title="分类总数:1"><div class="length-num">1</div><div class="headline">分类</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/L-Penguin" title="Github"><i class="solitude  st-github-line"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude st-map-line"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/05/03/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%96%87%E6%A1%A3/" title="Frontend面试问题汇总"><img alt="Frontend面试问题汇总" src= "/img/loading.gif" data-lazy-src="../assets/readme.jpg"></a><div class="content"><a class="title" href="/2024/05/03/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%96%87%E6%A1%A3/" title="Frontend面试问题汇总">Frontend面试问题汇总</a><a class="article-recent_post_categories" href="/2024/05/03/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%96%87%E6%A1%A3/">Frontend</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/01/README/" title="ReadMe First"><img alt="ReadMe First" src= "/img/loading.gif" data-lazy-src="/img/default.png"></a><div class="content"><a class="title" href="/2024/05/01/README/" title="ReadMe First">ReadMe First</a><a class="article-recent_post_categories" href="/2024/05/01/README/">Frontend</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/25/TypeScript%E7%9B%B8%E5%85%B3/" title="TypeScript 了解"><img alt="TypeScript 了解" src= "/img/loading.gif" data-lazy-src="../assets/typescript.png"></a><div class="content"><a class="title" href="/2023/12/25/TypeScript%E7%9B%B8%E5%85%B3/" title="TypeScript 了解">TypeScript 了解</a><a class="article-recent_post_categories" href="/2023/12/25/TypeScript%E7%9B%B8%E5%85%B3/">Frontend</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/18/JavaScript%E7%9B%B8%E5%85%B3/" title="JavaScript 了解"><img alt="JavaScript 了解" src= "/img/loading.gif" data-lazy-src="../assets/JavaScript.png"></a><div class="content"><a class="title" href="/2023/12/18/JavaScript%E7%9B%B8%E5%85%B3/" title="JavaScript 了解">JavaScript 了解</a><a class="article-recent_post_categories" href="/2023/12/18/JavaScript%E7%9B%B8%E5%85%B3/">Frontend</a></div></div></div></div><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="webinfo"><div class="webinfo-item"><div class="webinfo-item-title"><i class="item-icon solitude st-folder-fill"></i><div class="item-name">文章总数 :</div></div><div class="item-count">4</div></div><div class="webinfo-item"><div class="webinfo-item-title"><i class="item-icon solitude st-calendar-todo-fill"></i><div class="item-name">建站天数 :</div></div><div class="item-count" id="runtimeshow"></div></div><div class="webinfo-item"><div class="webinfo-item-title"><i class="item-icon solitude st-loop-left-fill"></i><div class="item-name">最后更新 :</div></div><time class="item-count" datetime="2024-05-03T11:44:12.753Z"></time></div></div></div></div></div></main><footer id="footer"><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/efuo" title="Github"><i class="solitude  st-github-line"></i></a><a class="deal_link" href="mailto:L_Penguin@163.com" title="Mail"><i class="solitude  st-mail-line"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/1329819902" title="Bilibili"><i class="solitude  st-bilibili-line"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/iJsLc8jt/" title="抖音"><i class="solitude  st-douyin-fill"></i></a></div><div id="st-footer"><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/archives/" title="归档">归档</a><a class="footer-item" href="/categories/" title="分类">分类</a><a class="footer-item" href="/tags/" title="标签">标签</a></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2023 - 2024 By&nbsp;<a class="footer-bar-link" href="/">L_Penguin</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/valor-x/hexo-theme-solitude" alt="主题">主题</a><a class="footer-bar-link cc" href="/null" aria-label="copyright"><i class="solitude st-copyright-line"></i><i class="solitude st-creative-commons-by-line"></i><i class="solitude st-creative-commons-nc-line"></i><i class="solitude st-creative-commons-nd-line"></i></a></div></div></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=1.10.0"></script><script src="/js/main.js?v=1.10.0"></script><script src="/js/third_party/waterfall.min.js?v=1.10.0"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="/js/third_party/universe.min.js?v=1.10.0"></script><script>dark()
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/19.1.3/lazyload.iife.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><div class="js-pjax"></div></div><!-- newest comment--><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ['title','#body-wrap','#site-config','meta[name="description"]','.js-pjax','meta[property^="og:"]','#config-diff'],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    is_rm && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- google adsense--><!-- search--><!-- Tianli-Talk--><!-- music--></body></html><script>const posts=["2024/05/03/前端面试文档/","2024/05/01/README/","2023/12/25/TypeScript相关/","2023/12/18/JavaScript相关/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); }</script>
